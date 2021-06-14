@@ -3,7 +3,7 @@
 
 
 
-#define OSC_FREQ (12000000L)
+#define OSC_FREQ (11059200L)
 
 // differ depend on the microcontroller
 

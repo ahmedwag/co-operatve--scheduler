@@ -24,14 +24,14 @@ void sch_init(void)
 	
 	}
   
-T2CON = 0x04; // load Timer 2 control 
-//T2MOD = 0x00; // load Timer 2 mode 
-TH2 = 0xFC; // load timer 2 high byte
-RCAP2H = 0xFC; // load timer 2 reload capture reg, high byte
-TL2 = 0x18; // load timer 2 low byte
-RCAP2L = 0x18; // load timer 2 reload capture reg, low byte
-ET2 = 1; // Timer 2  is enabled
-TR2 = 1; // Start Timer 2
+			T2CON = 0x04; // load Timer 2 control 
+			//T2MOD = 0x00; // load Timer 2 mode 
+			TH2 = 0xEE; // load timer 2 high byte
+			RCAP2H =0xEE; // load timer 2 reload capture reg, high byte
+			TL2 = 0x00; // load timer 2 low byte
+			RCAP2L = 0x00; // load timer 2 reload capture reg, low byte
+			ET2 = 1; // Timer 2  is enabled
+			TR2 = 1; // Start Timer 2
 	
 }
 
