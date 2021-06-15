@@ -136,3 +136,80 @@ void switch_manage()
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+void switch_multiState_update()
+{
+	
+	
+			           if (switch_pin == SWITCH_PRESSED)
+									 {
+										 
+													 sw_press_duration++;
+												 
+													 /*if it still pressed for long time bigger 
+														than bouncing time so it is realy pressed */
+													 if( sw_press_duration > SWITCH_THRESHOLD && sw_press_duration < SWITCH_THRESHOLD_B )
+														{ 
+																	
+															
+																	// change the status of the switch depending of the previos value 
+																	sw_status_G = SWITCH_STATUS_1;
+
+														}
+														 else if ( sw_press_duration >= SWITCH_THRESHOLD_B )
+														   {
+																 sw_press_duration = SWITCH_THRESHOLD_B;
+																 
+															   sw_status_G =SWITCH_STATUS_2;
+															 
+															 }
+														else
+															{
+																// still not enough pressing 
+																 
+															}
+						
+									 }
+									 
+									 else
+									 {
+										 
+										 
+										 // reset the variable to its initial value
+									 
+										 sw_press_duration = 0;
+										 
+										 sw_status_G = SWITCH_OFF;
+										 
+										 
+									 
+									 }
+							
+							
+							
+
+
+
+
+
+
+
+
+
+
+}

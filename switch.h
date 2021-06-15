@@ -25,6 +25,13 @@
 #define SWITCH_THRESHOLD 3
 
 
+#define SWITCH_THRESHOLD_B 5
+
+// multi state switch related status
+ 
+ #define SWITCH_STATUS_1 2
+ 
+ #define SWITCH_STATUS_2 3
 
 // used as global variable to know the status of the switch
 
@@ -38,6 +45,14 @@ void switch_init();
 // reading the switch pin and update its status
 
 void switch_manage();
+
+
+
+// multi state switch
+
+
+
+void switch_multiState_update();
 
 
 
